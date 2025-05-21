@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Biruk Gashaw</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Include all previous common styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+        }
+      
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 1.5rem 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .nav-links a:hover {
+        color: #4ecdc4;
+        background: rgba(78, 205, 196, 0.1);
+    }
+
+    .nav-links .active {
+        color: #4ecdc4;
+        border: 2px solid #4ecdc4;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.7rem;
+        }
+    }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 2rem;
+        }
+
+        .projects-grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-card {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(78, 205, 196, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(78, 205, 196, 0.1);
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(78, 205, 196, 0.1), 
+                transparent);
+            transform: rotate(45deg);
+            transition: 0.5s;
+        }
+
+        .project-card:hover::before {
+            animation: border-effect 6s linear infinite;
+        }
+
+        @keyframes border-effect {
+            0% { transform: rotate(45deg) translate(-50%, -50%); }
+            100% { transform: rotate(45deg) translate(50%, 50%); }
+        }
+
+        .project-icon {
+            font-size: 2.5rem;
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .project-description {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4ecdc4;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #4ecdc4;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #4ecdc4;
+            color: #0a0a0a;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                flex-direction: column;
+            }
+            .projects-container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (Same as previous pages) -->
+    <!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+</nav>
+
+    <!-- Projects Content -->
+    <div class="projects-container">
+        <h2 class="owner-name" style="text-align: center; margin-bottom: 3rem;">My Projects</h2>
+        
+        <div class="projects-grid">
+            <!-- E-commerce Project -->
+            <div class="project-card">
+                <i class="fas fa-shopping-cart project-icon"></i>
+                <h3 class="project-title">E-Commerce Platform</h3>
+                <p class="project-description">
+                    A full-stack e-commerce solution featuring product management, 
+                    user authentication, and payment integration. Built with modern 
+                    web technologies for seamless shopping experiences.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">html</span>
+                    <span class="tech-tag">Css</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="e-commerce.html" class="project-link">
+                    Visit Project
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <!-- Educational Project -->
+            <div class="project-card">
+                <i class="fas fa-graduation-cap project-icon"></i>
+                <h3 class="project-title">E-Learning Platform</h3>
+                <p class="project-description">
+                    An interactive learning management system with course creation, 
+                    video lectures, and progress tracking. Designed to enhance 
+                    online education experiences.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">html</span>
+                    <span class="tech-tag">css</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="edu.html" class="project-link">
+                    Visit Project
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <!-- Add this inside the projects-grid div -->
+<div class="project-card">
+    <i class="fas fa-palette project-icon"></i>
+    <h3 class="project-title">Logo Design Studio</h3>
+    <p class="project-description">
+        Professional branding solutions with custom logo designs, 
+        brand identity packages, and visual style guides. 
+        Focused on creating memorable brand experiences.
+    </p>
+    <div class="tech-stack">
+        <span class="tech-tag">Adobe Illustrator</span>
+        <span class="tech-tag">CorelDRAW</span>
+        <span class="tech-tag">Photoshop</span>
+    </div>
+    <a href="https://www.canva.com/" class="project-link">
+        View webpage
+        <i class="fas fa-expand-arrows-alt"></i>
+    </a>
+</div>
+        </div>
+    </div>
+
+    <!-- Bubbles Background -->
+    <div class="bubbles">
+        <!-- Animated bubbles from previous pages -->
+    </div>
+
+    <script>
+        // Bubbles animation script from home page
+        function createBubbles() {
+            const bubblesContainer = document.querySelector('.bubbles');
+            const bubbleCount = 15;
+
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.animationDelay = Math.random() * 5 + 's';
+                bubble.style.animationDuration = Math.random() * 5 + 8 + 's';
+                bubble.style.width = Math.random() * 20 + 20 + 'px';
+                bubble.style.height = bubble.style.width;
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        createBubbles();
+    </script>
+</body>
+</html>

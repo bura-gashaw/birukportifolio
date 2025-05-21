@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biruk Gashaw Portfolio</title>
+ <style>
+    /* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  padding: 20px;
+}
+
+.name {
+  font-size: 5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.name .highlight {
+  color: #61dafb; /* React dev blue */
+}
+
+.welcome {
+  font-size: 1.8em;
+  margin: 20px 0 10px;
+  color: #00d8ff;
+}
+
+.note {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #cccccc;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-button {
+  text-decoration: none;
+  background: #61dafb;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.about-button:hover {
+  background: #21a1f1;
+}
+
+/* Bubble animation background */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bubbles li {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(45deg, #61dafb, #00d8ff);
+  opacity: 0.4;
+  border-radius: 50%;
+  animation: float 20s linear infinite;
+  bottom: -150px;
+}
+
+.bubbles li:nth-child(1) {
+  left: 10%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 15s;
+}
+
+.bubbles li:nth-child(2) {
+  left: 20%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 12s;
+}
+
+.bubbles li:nth-child(3) {
+  left: 25%;
+  animation-duration: 18s;
+}
+
+.bubbles li:nth-child(4) {
+  left: 40%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 22s;
+}
+
+.bubbles li:nth-child(5) {
+  left: 70%;
+  animation-duration: 17s;
+}
+
+.bubbles li:nth-child(6) {
+  left: 80%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 20s;
+}
+
+.bubbles li:nth-child(7) {
+  left: 90%;
+  animation-duration: 19s;
+}
+
+.bubbles li:nth-child(8) {
+  left: 50%;
+  animation-duration: 14s;
+}
+
+.bubbles li:nth-child(9) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 16s;
+}
+
+.bubbles li:nth-child(10) {
+  left: 85%;
+  width: 55px;
+  height: 55px;
+  animation-duration: 23s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-400px) scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-800px) scale(1);
+    opacity: 0;
+  }
+}
+ </style>
+ <script>
+ </script>
+</head>
+<body>
+  <div class="background">
+    <ul class="bubbles">
+      <li></li><li></li><li></li><li></li><li></li>
+      <li></li><li></li><li></li><li></li><li></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1 class="name">Biruk <span class="highlight">Gashaw</span></h1>
+    <p class="welcome"><i class="fas fa-hand-sparkles"></i> Welcome to my portfolio!</p>
+    <p class="note">
+      <i class="fas fa-code"></i> I'm a passionate web developer focused on creating responsive and dynamic user experiences.
+    </p>
+    <a href="about.html" class="about-button">
+      <i class="fas fa-user"></i> About Me
+    </a>
+  </div>
+</body>
+</html>

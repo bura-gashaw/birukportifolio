@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Biruk Gashaw</title>
+    <style>
+        /* Include all previous styles from home page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            background: #0a0a0a;
+            min-height: 100vh;
+            position: relative;
+            color: #fff;
+        }
+
+        /* Navbar Styles */
+        
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        padding: 1.5rem 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(78, 205, 196, 0.1);
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .nav-links a:hover {
+        color: #4ecdc4;
+        background: rgba(78, 205, 196, 0.1);
+    }
+
+    .nav-links .active {
+        color: #4ecdc4;
+        border: 2px solid #4ecdc4;
+    }
+
+        /* About Section Styles */
+        .about-container {
+            display: ;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 150px auto 100px;
+            padding: 2rem;
+        }
+
+        h3{
+            margin: 0 0 30px 0;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #4ecdc4;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 30px rgba(78, 205, 196, 0.3);
+        }
+
+        .skills-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 60px;
+            border-radius: 10px;
+            margin: 1rem 0;
+        }
+
+        .skill-item {
+            display: inline-block;
+            background: #4ecdc4;
+            color: #0a0a0a;
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .about-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .about-content h3 {
+            color: #4ecdc4;
+            margin-bottom: 1rem;
+        }
+
+        /* Certificate Image Styles */
+        .certificate-item {
+            display: inline-block;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .certificate-item img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+            transition: width 0.3s ease-in-out, transform 0.3s ease;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .certificate-item img:hover {
+            width: 60%;
+            transform: scale(1.05);
+        }
+
+        .certificate-item span {
+            display: block;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 992px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skills-box {
+                padding: 1rem;
+            }
+
+            .skill-item {
+                font-size: 0.9rem;
+            }
+
+            .certificate-item img {
+                width: 50%;
+                height: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Content -->
+    <div class="content">
+        <div class="about-container">
+            <!-- Left Column -->
+            <div class="profile-section">
+                <img src="assets/img/9 (1).png" alt="Biruk Gashaw" class="profile-photo">
+                
+                <div class="skills-box">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">HTML5</div>
+                    <div class="skill-item">CSS3</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">React</div>
+                    <div class="skill-item">Node.js</div>
+                </div>
+
+                <div class="skills-box">
+                    <h3>Learned Subjects</h3>
+                    <div class="skill-item">English</div>
+                    <div class="skill-item">Mathematics</div>
+                    <div class="skill-item">Web Development</div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="about-content">
+                <h2>Biruk Gashaw</h2>
+                <p>
+                    Full-stack developer specializing in modern web technologies. 
+                    Passionate about creating clean, efficient code and intuitive user experiences. 
+                    Currently focused on mastering advanced JavaScript frameworks and cloud technologies.
+                </p>
+
+                <h3>Certifications</h3>
+                <!-- Certificate Images without container -->
+                <div class="certificate-item">
+                    <img src="assets/img/2.jpg" alt="Promoted 8-9 certificate">
+                    <span>Promoted 8-9 Certificate</span>
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/img/3.jpg" alt="Promoted 9-10 certificate">
+                    <span>Promoted 9-10 Certificate</span>
+                </div>
+                <div class="certificate-item">
+                    <img src="assets/img/4.jpg" alt="Promoted 10-11 certificate">
+                    <span>Promoted 10-11 Certificate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bubbles Background -->
+    <div class="bubbles"></div>
+    
+    <script>
+        // Create animated bubbles (same as home page)
+        function createBubbles() {
+            const bubblesContainer = document.querySelector('.bubbles');
+            const bubbleCount = 15;
+
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                bubble.style.left = Math.random() * 100 + '%';
+                bubble.style.animationDelay = Math.random() * 5 + 's';
+                bubble.style.animationDuration = Math.random() * 5 + 8 + 's';
+                bubble.style.width = Math.random() * 20 + 20 + 'px';
+                bubble.style.height = bubble.style.width;
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        createBubbles();
+    </script>
+</body>
+</html>

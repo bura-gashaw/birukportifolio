@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Future Academy</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            background-color: #2c3e50;
+        }
+        
+        nav ul li a.active {
+            background-color: #3498db;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        /* Home Section */
+        .welcome-message {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .announcements {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin-bottom: 1rem;
+        }
+        
+        /* Fees Section */
+        .fee-table {
+            width: 5000%;
+            border-collapse: collapse;
+            margin-left: 30px;
+        }
+        
+        .fee-table th, .fee-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        .fee-table th {
+            background-color: #34495e;
+            color: white;
+        }
+        
+        .fee-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* Registration Form */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Schedule Section */
+        .schedule {
+            margin-top: 1rem;
+        }
+        
+        .event {
+            display: flex;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .event-date {
+            background-color: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-align: center;
+            margin-right: 1rem;
+            min-width: 100px;
+        }
+        
+        .event-date .day {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .event-date .month {
+            font-size: 0.9rem;
+            display: block;
+        }
+        
+        .event-details {
+            flex-grow: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .event {
+                flex-direction: column;
+            }
+            
+            .event-date {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bright Future Academy</div>
+        <p>Quality Education for a Brighter Tomorrow</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#fees">Fee Structure</a></li>
+            <li><a href="#registration">Registration</a></li>
+            <li><a href="#schedule">Annual Schedule</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="home">
+            <div class="welcome-message">
+                <h1>Welcome to Bright Future Academy</h1>
+                <p>Providing excellence in education since 1995</p>
+            </div>
+            
+            <div class="announcements">
+                <h3>Important Announcements</h3>
+                <ul>
+                    <li>New academic year begins on June 1st, 2023</li>
+                    <li>Registration for new students now open</li>
+                    <li>Parent-teacher meetings scheduled for May 15th</li>
+                </ul>
+            </div>
+            
+            <h2>Our Mission</h2>
+            <p>At Bright Future Academy, we are committed to providing a nurturing environment that fosters academic excellence, character development, and lifelong learning. Our dedicated faculty and comprehensive curriculum prepare students to meet the challenges of an ever-changing world.</p>
+        </section>
+        
+        <section id="fees">
+            <h2>Monthly Fee Structure (2023-2024)</h2>
+            <table class="fee-table" style="width:700px">
+                <thead>
+                    <tr>
+                        <th>Grade</th>
+                        <th>Tuition Fee</th>
+                        <th>Activity Fee</th>
+                        <th>Total Monthly Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pre-School</td>
+                        <td>1500 birr</td>
+                        <td>200 birr</td>
+                        <td>1700 birr</td>
+                    </tr>
+                    <tr>
+                        <td>Kindergarten</td>
+                        <td>1800 birr</td>
+                        <td>250 birr</td>
+                        <td>2050 birr</td>
+                    </tr>
+                    <tr>
+                        <td>Grade 1-3</td>
+                        <td>2000 birr</td>
+                        <td>300 birr</td>
+                        <td>2300 birr</td>
+                    </tr>
+                    <tr>
+                        <td>Grade 4-6</td>
+                        <td>2200 birr</td>
+                        <td>350 birr</td>
+                        <td>2550 birr</td>
+                    </tr>
+                    <tr>
+                        <td>Grade 7-9</td>
+                        <td>2500 birr</td>
+                        <td>400 birr</td>
+                        <td>2900 birr</td>
+                    </tr>
+                    <tr>
+                        <td>Grade 10-12</td>
+                        <td>2800 birr</td>
+                        <td>450 birr</td>
+                        <td>3250 birr</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Additional Information</h3>
+            <ul>
+                <li>Fees are due by the 5th of each month</li>
+                <li>A late fee of $15 will be applied after the due date</li>
+                <li>Discount of 10% available for siblings</li>
+                <li>Annual registration fee: $100 (non-refundable)</li>
+            </ul>
+        </section>
+        
+        <section id="registration">
+            <h2>Student Registration Form</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="studentName">Student Full Name</label>
+                    <input type="text" id="studentName" name="studentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grade">Grade Applying For</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select Grade</option>
+                        <option value="pre-school">Pre-School</option>
+                        <option value="kindergarten">Kindergarten</option>
+                        <option value="grade1">Grade 1</option>
+                        <option value="grade2">Grade 2</option>
+                        <option value="grade3">Grade 3</option>
+                        <option value="grade4">Grade 4</option>
+                        <option value="grade5">Grade 5</option>
+                        <option value="grade6">Grade 6</option>
+                        <option value="grade7">Grade 7</option>
+                        <option value="grade8">Grade 8</option>
+                        <option value="grade9">Grade 9</option>
+                        <option value="grade10">Grade 10</option>
+                        <option value="grade11">Grade 11</option>
+                        <option value="grade12">Grade 12</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="parentName">Parent/Guardian Name</label>
+                    <input type="text" id="parentName" name="parentName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="previousSchool">Previous School (if applicable)</label>
+                    <input type="text" id="previousSchool" name="previousSchool">
+                </div>
+                
+                <div class="form-group">
+                    <label for="medicalInfo">Medical Information/Allergies</label>
+                    <textarea id="medicalInfo" name="medicalInfo" rows="2"></textarea>
+                </div>
+                
+                <button type="submit">Submit Registration</button>
+            </form>
+        </section>
+        
+        <section id="schedule">
+            <h2>Annual School Schedule 2023-2024</h2>
+            
+            <div class="schedule">
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">1</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Academic Year Begins</h3>
+                        <p>First day of school for all students</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">4</span>
+                        <span class="month">Jul</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Mid-Term Exams</h3>
+                        <p>Exams for all grades</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">14</span>
+                        <span class="month">Aug</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Independence Day</h3>
+                        <p>School closed for national holiday</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">5-9</span>
+                        <span class="month">Sep</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Sports Week</h3>
+                        <p>Sports competitions and activities</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Oct</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Parent-Teacher Conferences</h3>
+                        <p>Meet with teachers to discuss student progress</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">20-24</span>
+                        <span class="month">Nov</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Final Exams</h3>
+                        <p>End of semester examinations</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Dec</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Winter Break Begins</h3>
+                        <p>School closed for winter vacation</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">8</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>School Reopens</h3>
+                        <p>Second semester begins</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Mar</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Science Fair</h3>
+                        <p>Annual student science projects exhibition</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">20-24</span>
+                        <span class="month">May</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Final Examinations</h3>
+                        <p>End of year exams for all grades</p>
+                    </div>
+                </div>
+                
+                <div class="event">
+                    <div class="event-date">
+                        <span class="day">1</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Graduation Ceremony</h3>
+                        <p>Celebration for graduating students</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about">
+            <h2>About Bright Future Academy</h2>
+            <p>Founded in 1995, Bright Future Academy has been a cornerstone of educational excellence in our community. We serve students from pre-school through high school, offering a comprehensive curriculum that challenges and inspires.</p>
+            
+            <h3>Our Facilities</h3>
+            <ul>
+                <li>Modern classrooms with smart board technology</li>
+                <li>Science and computer laboratories</li>
+                <li>Library with over 10,000 volumes</li>
+                <li>Sports fields and gymnasium</li>
+                <li>Art and music studios</li>
+            </ul>
+            
+            <h3>Our Faculty</h3>
+            <p>Our teachers are highly qualified professionals with an average of 15 years of teaching experience. They participate in ongoing professional development to stay current with educational best practices.</p>
+            
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> Addis Ababa,Gergi</p>
+            <p><strong>Phone:</strong> 0912345678</p>
+            <p><strong>Email:</strong> Group 2@gmail.com</p>
+            <p><strong>Office Hours:</strong> Monday-Friday, 8:00 AM - 4:00 PM</p>
+            <a href="project.html"><button class="btn" style="
+            background: blue;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+            text-decoration:none;
+            margin:10px;
+        ">⬅️Back</button></a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="contact-info">
+            <p>Bright Future Academy &copy; 2023 | All Rights Reserved</p>
+            <p>123 Education Street, Learning City, LC 12345</p>
+        </div>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Simple form validation
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const studentName = document.getElementById('studentName').value;
+            const grade = document.getElementById('grade').value;
+            
+            // Simple validation
+            if (!studentName || !grade) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // If validation passes, show success message
+            alert('Registration submitted successfully! We will contact you soon.');
+            this.reset();
+        });
+        
+        // Simple navigation highlighting
+        const navLinks = document.querySelectorAll('nav ul li a');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
